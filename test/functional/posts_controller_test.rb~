@@ -18,7 +18,7 @@ class PostsControllerTest < ActionController::TestCase
     end
 
     assert_redirected_to post_path(assigns(:post))
-    assert_equal "Your post is saved!", flash[:notice]
+    assert_equal "Post was successfully created.", flash[:notice]
   end
 
   test "should show post" do

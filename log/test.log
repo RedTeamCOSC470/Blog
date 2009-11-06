@@ -1,0 +1,388 @@
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSELECT count(*) AS count_all FROM "posts" [0m
+
+
+Processing PostsController#create (for 0.0.0.0 at 2009-11-06 15:00:19) [POST]
+  Parameters: {"post"=>{"title"=>"Something"}}
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/_form (26.4ms)
+Completed in 54ms (View: 40, DB: 4) | 200 OK [http://test.host/posts?post%5Btitle%5D=Something]
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "posts" [0m
+  [4;35;1mPost Load (1.4ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 2053932785) [0m
+
+
+Processing PostsController#destroy (for 0.0.0.0 at 2009-11-06 15:00:19) [DELETE]
+  Parameters: {"id"=>"2053932785"}
+  [4;36;1mPost Load (0.5ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 2053932785) [0m
+  [4;35;1mPost Destroy (0.8ms)[0m   [0mDELETE FROM "posts" WHERE "id" = 2053932785[0m
+Redirected to http://test.host/posts
+Completed in 3ms (DB: 4) | 302 Found [http://test.host/posts/2053932785]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "posts" [0m
+  [4;35;1mPost Load (1.6ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 2053932785) [0m
+
+
+Processing PostsController#edit (for 0.0.0.0 at 2009-11-06 15:00:19) [GET]
+  Parameters: {"id"=>"2053932785"}
+  [4;36;1mPost Load (0.9ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 2053932785) [0m
+Rendering template within layouts/posts
+Rendering posts/edit
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM "tags" WHERE ("tags".post_id = 2053932785) [0m
+Rendered posts/_form (12.1ms)
+Completed in 18ms (View: 15, DB: 4) | 200 OK [http://test.host/posts/2053932785/edit]
+
+
+Processing PostsController#index (for 0.0.0.0 at 2009-11-06 15:00:19) [GET]
+  [4;36;1mPost Load (0.8ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 21ms (View: 19, DB: 1) | 200 OK [http://test.host/posts]
+
+
+Processing PostsController#new (for 0.0.0.0 at 2009-11-06 15:00:19) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/_form (8.4ms)
+Completed in 11ms (View: 10, DB: 0) | 200 OK [http://test.host/posts/new]
+  [4;35;1mPost Load (0.7ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 2053932785) [0m
+
+
+Processing PostsController#show (for 0.0.0.0 at 2009-11-06 15:00:19) [GET]
+  Parameters: {"id"=>"2053932785"}
+  [4;36;1mPost Load (0.7ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 2053932785) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 2053932785) [0m
+Completed in 9ms (View: 5, DB: 2) | 200 OK [http://test.host/posts/2053932785]
+  [4;36;1mPost Load (0.1ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 2053932785) [0m
+
+
+Processing PostsController#update (for 0.0.0.0 at 2009-11-06 15:00:19) [PUT]
+  Parameters: {"post"=>{}, "id"=>"2053932785"}
+  [4;35;1mPost Load (0.5ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 2053932785) [0m
+Redirected to http://test.host/posts/2053932785
+Completed in 6ms (DB: 1) | 302 Found [http://test.host/posts/2053932785?]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "posts" [0m
+
+
+Processing PostsController#create (for 0.0.0.0 at 2009-11-06 15:01:27) [POST]
+  Parameters: {"post"=>{"name"=>"Bob", "title"=>"Something"}}
+  [4;35;1mPost Create (0.7ms)[0m   [0mINSERT INTO "posts" ("name", "updated_at", "title", "content", "created_at") VALUES('Bob', '2009-11-06 23:01:27', 'Something', NULL, '2009-11-06 23:01:27')[0m
+Redirected to http://test.host/posts/2053932786
+Completed in 15ms (DB: 3) | 302 Found [http://test.host/posts?post%5Bname%5D=Bob&post%5Btitle%5D=Something]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "posts" [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+  [4;36;1mPost Load (0.5ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 2053932785) [0m
+
+
+Processing PostsController#destroy (for 0.0.0.0 at 2009-11-06 15:01:27) [DELETE]
+  Parameters: {"id"=>"2053932785"}
+  [4;35;1mPost Load (0.5ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 2053932785) [0m
+  [4;36;1mPost Destroy (0.4ms)[0m   [0;1mDELETE FROM "posts" WHERE "id" = 2053932785[0m
+Redirected to http://test.host/posts
+Completed in 3ms (DB: 2) | 302 Found [http://test.host/posts/2053932785]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+  [4;36;1mPost Load (0.5ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 2053932785) [0m
+
+
+Processing PostsController#edit (for 0.0.0.0 at 2009-11-06 15:01:27) [GET]
+  Parameters: {"id"=>"2053932785"}
+  [4;35;1mPost Load (0.6ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 2053932785) [0m
+Rendering template within layouts/posts
+Rendering posts/edit
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "tags" WHERE ("tags".post_id = 2053932785) [0m
+Rendered posts/_form (16.9ms)
+Completed in 80ms (View: 78, DB: 2) | 200 OK [http://test.host/posts/2053932785/edit]
+
+
+Processing PostsController#index (for 0.0.0.0 at 2009-11-06 15:01:27) [GET]
+  [4;35;1mPost Load (0.9ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 22ms (View: 19, DB: 1) | 200 OK [http://test.host/posts]
+
+
+Processing PostsController#new (for 0.0.0.0 at 2009-11-06 15:01:27) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/_form (8.2ms)
+Completed in 11ms (View: 11, DB: 0) | 200 OK [http://test.host/posts/new]
+  [4;36;1mPost Load (0.6ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 2053932785) [0m
+
+
+Processing PostsController#show (for 0.0.0.0 at 2009-11-06 15:01:27) [GET]
+  Parameters: {"id"=>"2053932785"}
+  [4;35;1mPost Load (0.5ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 2053932785) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+  [4;36;1mComment Load (0.3ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 2053932785) [0m
+Completed in 8ms (View: 6, DB: 1) | 200 OK [http://test.host/posts/2053932785]
+  [4;35;1mPost Load (0.5ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 2053932785) [0m
+
+
+Processing PostsController#update (for 0.0.0.0 at 2009-11-06 15:01:27) [PUT]
+  Parameters: {"post"=>{}, "id"=>"2053932785"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 2053932785) [0m
+Redirected to http://test.host/posts/2053932785
+Completed in 5ms (DB: 1) | 302 Found [http://test.host/posts/2053932785?]
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "posts" [0m
+
+
+Processing PostsController#create (for 0.0.0.0 at 2009-11-06 15:03:17) [POST]
+  Parameters: {"post"=>{"name"=>"Bob", "title"=>"Something"}}
+  [4;35;1mPost Create (0.8ms)[0m   [0mINSERT INTO "posts" ("name", "updated_at", "title", "content", "created_at") VALUES('Bob', '2009-11-06 23:03:17', 'Something', NULL, '2009-11-06 23:03:17')[0m
+Redirected to http://test.host/posts/2053932786
+Completed in 16ms (DB: 4) | 302 Found [http://test.host/posts?post%5Bname%5D=Bob&post%5Btitle%5D=Something]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "posts" [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+  [4;36;1mPost Load (0.6ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 2053932785) [0m
+
+
+Processing PostsController#destroy (for 0.0.0.0 at 2009-11-06 15:03:17) [DELETE]
+  Parameters: {"id"=>"2053932785"}
+  [4;35;1mPost Load (0.5ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 2053932785) [0m
+  [4;36;1mPost Destroy (0.6ms)[0m   [0;1mDELETE FROM "posts" WHERE "id" = 2053932785[0m
+Redirected to http://test.host/posts
+Completed in 4ms (DB: 3) | 302 Found [http://test.host/posts/2053932785]
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+  [4;36;1mPost Load (1.1ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 2053932785) [0m
+
+
+Processing PostsController#edit (for 0.0.0.0 at 2009-11-06 15:03:17) [GET]
+  Parameters: {"id"=>"2053932785"}
+  [4;35;1mPost Load (0.5ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 2053932785) [0m
+Rendering template within layouts/posts
+Rendering posts/edit
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM "tags" WHERE ("tags".post_id = 2053932785) [0m
+Rendered posts/_form (17.2ms)
+Completed in 25ms (View: 23, DB: 2) | 200 OK [http://test.host/posts/2053932785/edit]
+
+
+Processing PostsController#index (for 0.0.0.0 at 2009-11-06 15:03:17) [GET]
+  [4;35;1mPost Load (0.8ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 22ms (View: 20, DB: 1) | 200 OK [http://test.host/posts]
+
+
+Processing PostsController#new (for 0.0.0.0 at 2009-11-06 15:03:18) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/_form (8.1ms)
+Completed in 12ms (View: 11, DB: 0) | 200 OK [http://test.host/posts/new]
+  [4;36;1mPost Load (0.7ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 2053932785) [0m
+
+
+Processing PostsController#show (for 0.0.0.0 at 2009-11-06 15:03:18) [GET]
+  Parameters: {"id"=>"2053932785"}
+  [4;35;1mPost Load (0.5ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 2053932785) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 2053932785) [0m
+Completed in 8ms (View: 6, DB: 1) | 200 OK [http://test.host/posts/2053932785]
+  [4;35;1mPost Load (0.5ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 2053932785) [0m
+
+
+Processing PostsController#update (for 0.0.0.0 at 2009-11-06 15:03:18) [PUT]
+  Parameters: {"post"=>{}, "id"=>"2053932785"}
+  [4;36;1mPost Load (0.5ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 2053932785) [0m
+Redirected to http://test.host/posts/2053932785
+Completed in 5ms (DB: 1) | 302 Found [http://test.host/posts/2053932785?]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "posts" [0m
+
+
+Processing PostsController#create (for 0.0.0.0 at 2009-11-06 15:03:51) [POST]
+  Parameters: {"post"=>{"name"=>"Bob", "title"=>"Something"}}
+  [4;35;1mPost Create (0.7ms)[0m   [0mINSERT INTO "posts" ("name", "updated_at", "title", "content", "created_at") VALUES('Bob', '2009-11-06 23:03:51', 'Something', NULL, '2009-11-06 23:03:51')[0m
+Redirected to http://test.host/posts/2053932786
+Completed in 16ms (DB: 6) | 302 Found [http://test.host/posts?post%5Bname%5D=Bob&post%5Btitle%5D=Something]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "posts" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+  [4;36;1mPost Load (0.5ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 2053932785) [0m
+
+
+Processing PostsController#destroy (for 0.0.0.0 at 2009-11-06 15:03:51) [DELETE]
+  Parameters: {"id"=>"2053932785"}
+  [4;35;1mPost Load (0.5ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 2053932785) [0m
+  [4;36;1mPost Destroy (0.1ms)[0m   [0;1mDELETE FROM "posts" WHERE "id" = 2053932785[0m
+Redirected to http://test.host/posts
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/posts/2053932785]
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+  [4;36;1mPost Load (0.5ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 2053932785) [0m
+
+
+Processing PostsController#edit (for 0.0.0.0 at 2009-11-06 15:03:51) [GET]
+  Parameters: {"id"=>"2053932785"}
+  [4;35;1mPost Load (0.5ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 2053932785) [0m
+Rendering template within layouts/posts
+Rendering posts/edit
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM "tags" WHERE ("tags".post_id = 2053932785) [0m
+Rendered posts/_form (16.4ms)
+Completed in 78ms (View: 76, DB: 2) | 200 OK [http://test.host/posts/2053932785/edit]
+
+
+Processing PostsController#index (for 0.0.0.0 at 2009-11-06 15:03:51) [GET]
+  [4;35;1mPost Load (0.9ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 21ms (View: 19, DB: 1) | 200 OK [http://test.host/posts]
+
+
+Processing PostsController#new (for 0.0.0.0 at 2009-11-06 15:03:51) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/_form (8.1ms)
+Completed in 12ms (View: 11, DB: 0) | 200 OK [http://test.host/posts/new]
+  [4;36;1mPost Load (0.6ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 2053932785) [0m
+
+
+Processing PostsController#show (for 0.0.0.0 at 2009-11-06 15:03:51) [GET]
+  Parameters: {"id"=>"2053932785"}
+  [4;35;1mPost Load (0.5ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 2053932785) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+  [4;36;1mComment Load (0.5ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 2053932785) [0m
+Completed in 8ms (View: 5, DB: 2) | 200 OK [http://test.host/posts/2053932785]
+  [4;35;1mPost Load (0.6ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 2053932785) [0m
+
+
+Processing PostsController#update (for 0.0.0.0 at 2009-11-06 15:03:51) [PUT]
+  Parameters: {"post"=>{}, "id"=>"2053932785"}
+  [4;36;1mPost Load (0.7ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 2053932785) [0m
+Redirected to http://test.host/posts/2053932785
+Completed in 5ms (DB: 1) | 302 Found [http://test.host/posts/2053932785?]
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "posts" [0m
+
+
+Processing PostsController#create (for 0.0.0.0 at 2009-11-06 15:09:05) [POST]
+  Parameters: {"post"=>{"name"=>"Bob", "title"=>"Something"}}
+  [4;35;1mPost Create (0.7ms)[0m   [0mINSERT INTO "posts" ("name", "updated_at", "title", "content", "created_at") VALUES('Bob', '2009-11-06 23:09:05', 'Something', NULL, '2009-11-06 23:09:05')[0m
+Redirected to http://test.host/posts/2053932786
+Completed in 15ms (DB: 6) | 302 Found [http://test.host/posts?post%5Bname%5D=Bob&post%5Btitle%5D=Something]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "posts" [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+  [4;36;1mPost Load (1.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 2053932785) [0m
+
+
+Processing PostsController#destroy (for 0.0.0.0 at 2009-11-06 15:09:05) [DELETE]
+  Parameters: {"id"=>"2053932785"}
+  [4;35;1mPost Load (0.5ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 2053932785) [0m
+  [4;36;1mPost Destroy (0.5ms)[0m   [0;1mDELETE FROM "posts" WHERE "id" = 2053932785[0m
+Redirected to http://test.host/posts
+Completed in 4ms (DB: 3) | 302 Found [http://test.host/posts/2053932785]
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+  [4;36;1mPost Load (0.5ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 2053932785) [0m
+
+
+Processing PostsController#edit (for 0.0.0.0 at 2009-11-06 15:09:05) [GET]
+  Parameters: {"id"=>"2053932785"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 2053932785) [0m
+Rendering template within layouts/posts
+Rendering posts/edit
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "tags" WHERE ("tags".post_id = 2053932785) [0m
+Rendered posts/_form (70.2ms)
+Completed in 79ms (View: 77, DB: 1) | 200 OK [http://test.host/posts/2053932785/edit]
+
+
+Processing PostsController#index (for 0.0.0.0 at 2009-11-06 15:09:06) [GET]
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 21ms (View: 18, DB: 1) | 200 OK [http://test.host/posts]
+
+
+Processing PostsController#new (for 0.0.0.0 at 2009-11-06 15:09:06) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/_form (8.1ms)
+Completed in 11ms (View: 11, DB: 0) | 200 OK [http://test.host/posts/new]
+  [4;36;1mPost Load (0.6ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 2053932785) [0m
+
+
+Processing PostsController#show (for 0.0.0.0 at 2009-11-06 15:09:06) [GET]
+  Parameters: {"id"=>"2053932785"}
+  [4;35;1mPost Load (0.5ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 2053932785) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+  [4;36;1mComment Load (0.3ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 2053932785) [0m
+Completed in 8ms (View: 5, DB: 1) | 200 OK [http://test.host/posts/2053932785]
+  [4;35;1mPost Load (0.6ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 2053932785) [0m
+
+
+Processing PostsController#update (for 0.0.0.0 at 2009-11-06 15:09:06) [PUT]
+  Parameters: {"post"=>{}, "id"=>"2053932785"}
+  [4;36;1mPost Load (0.5ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 2053932785) [0m
+Redirected to http://test.host/posts/2053932785
+Completed in 5ms (DB: 1) | 302 Found [http://test.host/posts/2053932785?]
+  [4;36;1mSQL (0.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
