@@ -80,6 +80,11 @@ class PostsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
+  protected
+  def secure?
+    true
+  end
   private 
     def find_post 
       @post = Post.find(params[:id])
